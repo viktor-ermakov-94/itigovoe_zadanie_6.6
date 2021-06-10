@@ -6,7 +6,6 @@ urlpatterns = [
     # т. к. сам по себе это класс, то нам надо представить этот класс в виде view. Для этого вызываем метод as_view
     path('authors/', AuthorsList.as_view()),
     path('authors/<int:pk>', AuthorDetail.as_view()),  # pk — это первичный ключ товара, который будет выводиться у нас в шаблон
-    # path('', NewsList.as_view()),
     path('news/', NewsList.as_view()),
     path('news/<int:pk>/', NewsDetail.as_view(), name='news_detail'),
 ]
